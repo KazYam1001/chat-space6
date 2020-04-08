@@ -1,0 +1,49 @@
+%main.main-chat
+  .current-group
+    .current-group__info
+      .current-group__name
+        グループ情報
+      %ul.current-group__member-list
+        Member：
+        %li.current-group__member
+          yam
+        %li.current-group__member
+          yam
+        %li.current-group__member
+          yam
+    = link_to 'Edit', '#', class: 'current-group__edit-btn'
+  %article.messages
+    .message
+      .message__info
+        %p.message__user-name
+          yam
+        %p.message__created-at
+          2020年04月08日 21時25分
+      .message__body
+        %p.message__content
+          aaa
+    .message
+      .message__info
+        %p.message__user-name
+          yam
+        %p.message__created-at
+          2020年04月08日 21時25分
+      .message__body
+        %p.message__content
+          aaa
+    .message
+      .message__info
+        %p.message__user-name
+          yam
+        %p.message__created-at
+          2020年04月08日 21時25分
+      .message__body
+        %p.message__content
+          aaa
+  %form{class: 'form'}
+    .form__fields
+      = text_field_tag :content, '', placeholder: 'type a message', class: 'form__content'
+      = label_tag :image, class: 'form__image-label' do
+        = icon 'fas', 'image'
+        = file_field_tag :image, class: 'form__image'
+    = submit_tag 'Send', class: 'form__submit'
