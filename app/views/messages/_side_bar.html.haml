@@ -1,0 +1,31 @@
+%aside.side-bar
+  .user-info
+    .user-info__list
+      .user-info__user-name
+        ユーザー名
+      %ul.user-info__menu
+        %li.user-info__icon
+          = link_to "#" do
+            = icon 'fas', 'edit'
+        %li.user-info__icon
+          = link_to "#" do
+            = icon 'fas', 'cog'
+  %ul.groups
+    %li.group
+      = link_to '#' do
+        %p.group__name
+          グループ
+        %p.group__last-message
+          まだ投稿はありません
+    %li.group
+      = link_to '#' do
+        %p.group__name
+          グループ
+        %p.group__last-message
+          まだ投稿はありません
+    %li.group
+      = link_to '#' do
+        %p.group__name
+          グループ
+        %p.group__last-message
+          まだ投稿はありません
