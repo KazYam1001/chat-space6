@@ -13,33 +13,7 @@
           yam
     = link_to 'Edit', '#', class: 'current-group__edit-btn'
   %article.messages
-    .message
-      .message__info
-        %p.message__user-name
-          yam
-        %p.message__created-at
-          2020年04月08日 21時25分
-      .message__body
-        %p.message__content
-          aaa
-    .message
-      .message__info
-        %p.message__user-name
-          yam
-        %p.message__created-at
-          2020年04月08日 21時25分
-      .message__body
-        %p.message__content
-          aaa
-    .message
-      .message__info
-        %p.message__user-name
-          yam
-        %p.message__created-at
-          2020年04月08日 21時25分
-      .message__body
-        %p.message__content
-          aaa
+    = render @messages
   = form_with model: [@group, @message], html: { class: 'form' }, local: true do |f|
     .form__fields
       = f.text_field :content, placeholder: 'type a message', class: 'form__content'
