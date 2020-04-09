@@ -40,10 +40,10 @@
       .message__body
         %p.message__content
           aaa
-  %form{class: 'form'}
+  = form_with model: [@group, @message], html: { class: 'form' }, local: true do |f|
     .form__fields
-      = text_field_tag :content, '', placeholder: 'type a message', class: 'form__content'
-      = label_tag :image, class: 'form__image-label' do
+      = f.text_field :content, placeholder: 'type a message', class: 'form__content'
+      = f.label :image, class: 'form__image-label' do
         = icon 'fas', 'image'
-        = file_field_tag :image, class: 'form__image'
-    = submit_tag 'Send', class: 'form__submit'
+        = f.file_field :image, class: 'form__image'
+    = f.submit 'Send', class: 'form__submit'
