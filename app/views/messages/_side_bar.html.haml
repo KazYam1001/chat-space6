@@ -5,7 +5,7 @@
         = current_user.name
       %ul.user-info__menu
         %li.user-info__icon
-          = link_to "#" do
+          = link_to new_group_path do
             = icon 'fas', 'edit'
         %li.user-info__icon
           = link_to edit_user_path(current_user) do
