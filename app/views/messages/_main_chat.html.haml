@@ -2,16 +2,13 @@
   .current-group
     .current-group__info
       .current-group__name
-        グループ情報
+        = @group.name
       %ul.current-group__member-list
         Member：
-        %li.current-group__member
-          yam
-        %li.current-group__member
-          yam
-        %li.current-group__member
-          yam
-    = link_to 'Edit', '#', class: 'current-group__edit-btn'
+        - @group.users.each do |user|
+          %li.current-group__member
+            = user.name
+    = link_to 'Edit', edit_group_path(@group), class: 'current-group__edit-btn'
   %article.messages
     = render @messages
   = form_with model: [@group, @message], html: { class: 'form' }, local: true do |f|
